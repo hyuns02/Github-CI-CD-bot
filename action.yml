@@ -13,7 +13,7 @@ inputs:
   github-token:
     description: Token for the GitHub API and GitHub Models
     required: false
-    deafault: ${{ github.token }}
+    default: ${{ github.token }}
   ci-result:
     description: Result of the CI job (success, failure, cancelled or skipped)
     required: true
