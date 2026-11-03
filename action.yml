@@ -1,0 +1,59 @@
+name: CI/CD Bot
+description:
+  AI assisted request summaries, review comments and CI failure explanations
+author: SFU Open Source Development Club
+
+# Add your action's branding here. This will appear on the GitHub Marketplace.
+branding:
+  icon: git-pull-request
+  color: gray-dark
+
+# Define your inputs here.
+inputs:
+  github-token:
+    description: Token for the GitHub API and GitHub Models
+    required: false
+    default: ${{ github.token }}
+  ci-result:
+    description: Result of the CI job (success, failure, cancelled or skipped)
+    required: true
+  summary:
+    description: Post a PR summary
+    required: false
+    default: 'true'
+  review:
+    description: Post inline review comments
+    required: false
+    default: 'true'
+  explain-failure:
+    description: Explain why CI failed
+    required: false
+    default: 'true'
+  pr-checks:
+    description: Run PR automation checks
+    required: false
+    default: 'true'
+  path-labels:
+    description: Folder-to-label map for PR automation
+    required: false
+    default: ''
+  max-comments:
+    description: Most inline comments per runs
+    required: false
+    default: '5'
+  min-confidence:
+    description: Drop review findings below this confidence
+    required: false
+    default: '0.6'
+  ignore-paths:
+    description: Comma-separated files never sent to the LLM
+    required: false
+    default: 'packages-lock.json,dis/**'
+  model:
+    description: GitHub Modesls model name
+    required: false
+    default: ''
+
+runs:
+  using: node24
+  main: dist/index.js
