@@ -4,7 +4,8 @@
 
 # GitHub Bot + CI/CD
 
-**An open-source GitHub automation tool that integrates CI/CD workflows with AI-powered pull request reviews, summaries, and build failure analysis.**
+**An open-source GitHub automation tool that integrates CI/CD workflows with
+AI-powered pull request reviews, summaries, and build failure analysis.**
 
 Developed and maintained by the **SFU Open Source Development Club (OS DEV)**.
 
@@ -14,15 +15,26 @@ Developed and maintained by the **SFU Open Source Development Club (OS DEV)**.
 
 ## About the Project
 
-GitHub Bot + CI/CD is an open-source developer automation project designed to streamline software development workflows using GitHub Actions and Large Language Models (LLMs).
+GitHub Bot + CI/CD is an open-source developer automation project designed to
+streamline software development workflows using GitHub Actions and Large
+Language Models (LLMs).
 
-The project aims to automate repetitive development tasks, including pull request summaries, code review assistance, issue management, automated testing, and CI/CD pipeline monitoring.
+The project aims to automate repetitive development tasks, including pull
+request summaries, code review assistance, issue management, automated testing,
+and CI/CD pipeline monitoring.
 
-By integrating GitHub's automation capabilities with an LLM API, the system will help developers better understand code changes, identify potential issues, and diagnose build failures.
+By integrating GitHub's automation capabilities with an LLM API, the system will
+help developers better understand code changes, identify potential issues, and
+diagnose build failures.
 
-Unlike traditional full-stack web applications, this project does not require a separate frontend. GitHub's existing Pull Request, Issues, and Actions interfaces serve as the primary user interface.
+Unlike traditional full-stack web applications, this project does not require a
+separate frontend. GitHub's existing Pull Request, Issues, and Actions
+interfaces serve as the primary user interface.
 
-The project is part of the **SFU OS DEV Fall 2026 Open Source Project Initiative**, providing students with hands-on experience in DevOps, CI/CD, backend automation, GitHub API integration, and AI-assisted software engineering.
+The project is part of the **SFU OS DEV Fall 2026 Open Source Project
+Initiative**, providing students with hands-on experience in DevOps, CI/CD,
+backend automation, GitHub API integration, and AI-assisted software
+engineering.
 
 **Project Status:** Early Development — Planning & Initial Setup
 
@@ -30,34 +42,36 @@ The project is part of the **SFU OS DEV Fall 2026 Open Source Project Initiative
 
 The following features are planned for development:
 
-| Feature | Description | Status |
-|---|---|---|
-| Pull Request Summarization | Automatically summarize code changes in Pull Requests using an LLM | Planned |
-| AI-Assisted Code Review | Analyze code changes and provide suggested improvements | Planned |
-| Inline Review Comments | Post contextual review comments on relevant lines of code | Planned |
-| Automated CI Checks | Run automated tests, builds, and validation workflows | Planned |
-| Build Failure Explanation | Analyze failed workflow logs and generate understandable explanations | Planned |
-| PR & Issue Automation | Automate routine Pull Request and Issue management tasks | Planned |
-| CI/CD Pipeline Integration | Integrate build, test, and deployment stages into GitHub Actions | Planned |
+| Feature                    | Description                                                           | Status  |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Pull Request Summarization | Automatically summarize code changes in Pull Requests using an LLM    | Planned |
+| AI-Assisted Code Review    | Analyze code changes and provide suggested improvements               | Planned |
+| Inline Review Comments     | Post contextual review comments on relevant lines of code             | Planned |
+| Automated CI Checks        | Run automated tests, builds, and validation workflows                 | Planned |
+| Build Failure Explanation  | Analyze failed workflow logs and generate understandable explanations | Planned |
+| PR & Issue Automation      | Automate routine Pull Request and Issue management tasks              | Planned |
+| CI/CD Pipeline Integration | Integrate build, test, and deployment stages into GitHub Actions      | Planned |
 
-Additional automation features may be proposed and implemented by project contributors.
+Additional automation features may be proposed and implemented by project
+contributors.
 
 ## Tech Stack
 
-| Category | Technologies |
-|---|---|
-| Runtime | Node.js |
-| Programming Language | JavaScript / TypeScript |
-| Automation | GitHub Actions |
-| Framework | GitHub Actions Toolkit (`@actions/core`, `@actions/github`) |
-| Configuration | YAML |
-| GitHub Integration | GitHub REST API / Octokit |
-| AI Integration | LLM API |
-| Testing | Jest or Vitest (To Be Determined) |
-| Version Control | Git, GitHub |
-| CI/CD | GitHub Actions |
+| Category             | Technologies                                                |
+| -------------------- | ----------------------------------------------------------- |
+| Runtime              | Node.js                                                     |
+| Programming Language | JavaScript / TypeScript                                     |
+| Automation           | GitHub Actions                                              |
+| Framework            | GitHub Actions Toolkit (`@actions/core`, `@actions/github`) |
+| Configuration        | YAML                                                        |
+| GitHub Integration   | GitHub REST API / Octokit                                   |
+| AI Integration       | LLM API                                                     |
+| Testing              | Jest or Vitest (To Be Determined)                           |
+| Version Control      | Git, GitHub                                                 |
+| CI/CD                | GitHub Actions                                              |
 
-The final LLM provider, testing framework, and implementation details will be determined by the project team.
+The final LLM provider, testing framework, and implementation details will be
+determined by the project team.
 
 ## Project Architecture
 
@@ -98,12 +112,14 @@ The application follows an event-driven architecture using GitHub Actions.
 ### Component Responsibilities
 
 **GitHub Actions**
+
 - Trigger workflows based on GitHub events.
 - Execute automated build and test jobs.
 - Run the custom GitHub automation bot.
 - Report workflow results.
 
 **GitHub Bot**
+
 - Retrieve Pull Request information.
 - Inspect changed files and commit metadata.
 - Process GitHub webhook event payloads.
@@ -111,12 +127,14 @@ The application follows an event-driven architecture using GitHub Actions.
 - Post summaries and review comments.
 
 **LLM Integration**
+
 - Generate summaries of Pull Request changes.
 - Provide code review suggestions.
 - Explain relevant CI/CD failures.
 - Produce structured analysis results.
 
 **CI/CD Pipeline**
+
 - Install dependencies.
 - Build application code.
 - Execute automated tests.
@@ -175,11 +193,13 @@ github-bot-cicd/
 └── README.md
 ```
 
-This structure represents the intended architecture and may change during development.
+This structure represents the intended architecture and may change during
+development.
 
 ## Getting Started
 
-We welcome contributors interested in DevOps, backend development, automation, AI integration, and software engineering.
+We welcome contributors interested in DevOps, backend development, automation,
+AI integration, and software engineering.
 
 ### Prerequisites
 
@@ -191,7 +211,8 @@ The planned development environment requires:
 - A GitHub account
 - Basic familiarity with Git and GitHub
 - Familiarity with YAML (recommended)
-- Access to an LLM API for applicable integration tasks (optional during initial development)
+- Access to an LLM API for applicable integration tasks (optional during initial
+  development)
 
 ### 1. Fork the Repository
 
@@ -230,7 +251,8 @@ Once the initial Node.js project has been configured:
 npm install
 ```
 
-Dependencies and their versions will be maintained in `package.json` and the project's lockfile.
+Dependencies and their versions will be maintained in `package.json` and the
+project's lockfile.
 
 ### 5. Run Tests
 
@@ -242,11 +264,15 @@ npm test
 
 ### 6. Run the Bot Locally
 
-The project will provide a development workflow for testing GitHub event handlers using sample event payloads and mocked GitHub API responses.
+The project will provide a development workflow for testing GitHub event
+handlers using sample event payloads and mocked GitHub API responses.
 
-Actual execution commands will be added to `docs/setup.md` once the starter codebase is implemented.
+Actual execution commands will be added to `docs/setup.md` once the starter
+codebase is implemented.
 
-**Note:** The repository is currently in early development. Installation commands, workflow files, and automation features must be implemented and verified before they are considered operational.
+**Note:** The repository is currently in early development. Installation
+commands, workflow files, and automation features must be implemented and
+verified before they are considered operational.
 
 ## GitHub Actions Integration
 
@@ -254,19 +280,20 @@ GitHub Actions will serve as the primary execution environment.
 
 ### Planned Workflow Triggers
 
-| Event | Planned Behavior |
-|---|---|
-| `pull_request` | Run CI checks and generate PR summaries |
-| `issues` | Perform selected Issue automation tasks |
-| `push` | Execute automated build and test workflows |
-| `workflow_run` | Analyze completed CI workflows and selected failures |
-| `workflow_dispatch` | Allow authorized users to trigger manual workflows |
+| Event               | Planned Behavior                                     |
+| ------------------- | ---------------------------------------------------- |
+| `pull_request`      | Run CI checks and generate PR summaries              |
+| `issues`            | Perform selected Issue automation tasks              |
+| `push`              | Execute automated build and test workflows           |
+| `workflow_run`      | Analyze completed CI workflows and selected failures |
+| `workflow_dispatch` | Allow authorized users to trigger manual workflows   |
 
 Trigger configuration and permissions will be finalized during implementation.
 
 ### Example Workflow Configuration
 
-The following is a minimal example of a CI workflow. It is intended as a starting reference and is not yet a complete project workflow.
+The following is a minimal example of a CI workflow. It is intended as a
+starting reference and is not yet a complete project workflow.
 
 ```yaml
 name: Continuous Integration
@@ -291,7 +318,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
 
       - name: Install dependencies
         run: npm ci
@@ -303,9 +330,11 @@ jobs:
         run: npm run build
 ```
 
-This example assumes the project provides a lockfile and the corresponding npm scripts.
+This example assumes the project provides a lockfile and the corresponding npm
+scripts.
 
-Production workflows should use reviewed, pinned action versions and follow the principle of least privilege.
+Production workflows should use reviewed, pinned action versions and follow the
+principle of least privilege.
 
 ## AI-Powered Pull Request Summarization
 
@@ -325,16 +354,19 @@ One of the planned core features is automatic Pull Request summarization.
 **Pull Request: Add API Usage Tracking**
 
 **Summary**
+
 - Introduces a new REST API endpoint for token usage records.
 - Adds request validation.
 - Includes basic unit tests.
 
 **Files Changed**
+
 - `src/api/usage.ts`
 - `src/models/usage.ts`
 - `tests/usage.test.ts`
 
 **Suggested Review Areas**
+
 - Input validation
 - Error handling
 - Test coverage
@@ -379,15 +411,17 @@ The project will explore methods for analyzing failed CI workflows.
 
 **Error Category:** Dependency Resolution
 
-**Possible Cause:**
-A required package version may be unavailable or incompatible with the current dependency configuration.
+**Possible Cause:** A required package version may be unavailable or
+incompatible with the current dependency configuration.
 
 **Suggested Investigation:**
+
 - Review the dependency lockfile.
 - Inspect the failing package version.
 - Reproduce the failure locally.
 
-The bot should distinguish observed errors from inferred causes rather than presenting uncertain diagnoses as facts.
+The bot should distinguish observed errors from inferred causes rather than
+presenting uncertain diagnoses as facts.
 
 ## Security & Permissions
 
@@ -399,17 +433,24 @@ All contributors must follow these principles:
 - Store sensitive credentials in GitHub Actions Secrets.
 - Grant workflows only the permissions required for their tasks.
 - Avoid exposing credentials to untrusted Pull Request code.
-- Treat PR descriptions, code changes, Issue comments, and logs as untrusted input.
+- Treat PR descriptions, code changes, Issue comments, and logs as untrusted
+  input.
 - Limit the size and scope of content sent to LLM providers.
-- Do not transmit sensitive repository data to external APIs without authorization.
+- Do not transmit sensitive repository data to external APIs without
+  authorization.
 - Avoid executing untrusted code with privileged GitHub tokens.
-- Review all automation permissions before enabling them on organization repositories.
+- Review all automation permissions before enabling them on organization
+  repositories.
 
 The project should initially be tested in a dedicated sandbox repository.
 
-Workflows handling untrusted Pull Requests must not receive privileged secrets. Any separate privileged commenting or analysis workflow must treat artifacts and logs as untrusted data, validate its inputs, and avoid executing attacker-controlled content.
+Workflows handling untrusted Pull Requests must not receive privileged secrets.
+Any separate privileged commenting or analysis workflow must treat artifacts and
+logs as untrusted data, validate its inputs, and avoid executing
+attacker-controlled content.
 
-The bot should not automatically approve or merge code based solely on LLM output.
+The bot should not automatically approve or merge code based solely on LLM
+output.
 
 ## Development Roadmap
 
@@ -467,11 +508,13 @@ The bot should not automatically approve or merge code based solely on LLM outpu
 - [ ] Prepare a reusable GitHub Action release
 - [ ] Present project outcomes to SFU OS DEV
 
-The project team will determine milestone priorities and the final implementation scope.
+The project team will determine milestone priorities and the final
+implementation scope.
 
 ## Contributing
 
-Contributions are welcome from developers interested in GitHub automation, DevOps, backend development, AI integration, and software engineering.
+Contributions are welcome from developers interested in GitHub automation,
+DevOps, backend development, AI integration, and software engineering.
 
 ### Contribution Workflow
 
@@ -528,13 +571,16 @@ Push your branch:
 git push -u origin feature/pr-summarizer
 ```
 
-Then open a Pull Request targeting the official OS DEV repository's `main` branch.
+Then open a Pull Request targeting the official OS DEV repository's `main`
+branch.
 
-For detailed guidelines, refer to [CONTRIBUTING.md](CONTRIBUTING.md) once available.
+For detailed guidelines, refer to [CONTRIBUTING.md](CONTRIBUTING.md) once
+available.
 
 ## Project Management
 
-The project will use GitHub Issues, Pull Requests, and GitHub Projects to coordinate development.
+The project will use GitHub Issues, Pull Requests, and GitHub Projects to
+coordinate development.
 
 ### GitHub Issues
 
@@ -554,13 +600,13 @@ Issues will be used to manage:
 
 Tasks may be organized into the following stages:
 
-| Stage | Description |
-|---|---|
-| Backlog | Proposed tasks awaiting review |
-| To Do | Approved tasks ready for development |
-| In Progress | Tasks currently being developed |
-| In Review | Pull Requests awaiting review |
-| Done | Completed and merged |
+| Stage       | Description                          |
+| ----------- | ------------------------------------ |
+| Backlog     | Proposed tasks awaiting review       |
+| To Do       | Approved tasks ready for development |
+| In Progress | Tasks currently being developed      |
+| In Review   | Pull Requests awaiting review        |
+| Done        | Completed and merged                 |
 
 ### Pull Request Guidelines
 
@@ -572,11 +618,13 @@ Each Pull Request should include:
 - Relevant workflow logs or screenshots
 - Documentation updates, if applicable
 
-Project maintainers will review all contributions before merging them into the main branch.
+Project maintainers will review all contributions before merging them into the
+main branch.
 
 ## Team Collaboration
 
-The project will be developed collaboratively under the guidance of a Project Lead.
+The project will be developed collaboratively under the guidance of a Project
+Lead.
 
 ### Project Lead Responsibilities
 
@@ -620,7 +668,8 @@ Through this project, contributors will gain hands-on experience in:
 - Technical documentation
 - Agile project management and teamwork
 
-Our goal is to provide a collaborative environment where students can develop practical automation tools while learning modern software engineering practices.
+Our goal is to provide a collaborative environment where students can develop
+practical automation tools while learning modern software engineering practices.
 
 ## Team & Maintainers
 
@@ -632,13 +681,16 @@ Our goal is to provide a collaborative environment where students can develop pr
 
 **Project Contributors:** To be announced
 
-The project is maintained collaboratively by students interested in DevOps, automation, software development, and AI integration.
+The project is maintained collaboratively by students interested in DevOps,
+automation, software development, and AI integration.
 
 ## License
 
-This project is intended to be released under the MIT License, subject to confirmation of contributor rights and third-party licensing requirements.
+This project is intended to be released under the MIT License, subject to
+confirmation of contributor rights and third-party licensing requirements.
 
-Once finalized, the full license terms will be available in the repository's `LICENSE` file.
+Once finalized, the full license terms will be available in the repository's
+`LICENSE` file.
 
 ## Connect With SFU OS DEV
 
@@ -650,4 +702,4 @@ Once finalized, the full license terms will be available in the repository's `LI
 
 **Built by students, automated for developers.**
 
-*SFU Open Source Development Club — Design. Develop. Deploy.*
+_SFU Open Source Development Club — Design. Develop. Deploy._
